@@ -4,16 +4,3 @@ body{
     padding: 40px;
 }
 
-.counter{
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.incButton{
-    margin: 5px;  
-}
-
-.decButton{
-    margin: 5px;  
-}
-

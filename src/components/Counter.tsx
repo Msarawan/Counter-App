@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Button } from '@patternfly/react-core';
+import { Button, TextContent,Text,TextVariants, } from '@patternfly/react-core';
 
 type CounterProps = {
     count : number;
@@ -10,9 +10,14 @@ type CounterProps = {
 const Counter: FC <CounterProps> = ({count,incrementCount,decrementCount}) => {
   return (
     <div>
-      <h1 className='counter'>Count - {count}</h1>
-      <Button variant="primary" onClick={incrementCount} className='incButton'>Increment</Button>
-      <Button variant="primary" onClick={decrementCount} className='decButton'>Decrement</Button>
+      <TextContent>
+        <Text component={TextVariants.h1}>
+           Count - {count}
+        </Text>
+      </TextContent>
+      <br/>
+      <Button variant="primary" onClick={incrementCount}>Increment</Button>{' '}
+      <Button variant="primary" onClick={decrementCount}>Decrement</Button>
     </div>
   )
 }

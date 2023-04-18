@@ -1,13 +1,18 @@
-import { FC } from 'react';
+import { FC,useState} from 'react';
 import { Button, TextContent,Text,TextVariants, } from '@patternfly/react-core';
 
 type CounterProps = {
-    count : number;
-    incrementCount: () => void;
-    decrementCount : () => void;
+  initialValue: number
+ }
+const Counter: FC<CounterProps> = ({initialValue}) => {
+  const [count , setCount] = useState<number>(initialValue);
+  const incrementCount = () =>{
+    setCount (count  + 1)
   }
 
-const Counter: FC <CounterProps> = ({count,incrementCount,decrementCount}) => {
+  const decrementCount = () =>{
+    setCount ( count - 1)
+  }
   return (
     <div>
       <TextContent>
